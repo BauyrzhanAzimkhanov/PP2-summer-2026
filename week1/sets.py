@@ -1,0 +1,17 @@
+subjects = {"Calculus", "PE", "Arts", "Differential math", "Physics"}
+for subject in subjects:
+    print(subject)
+print(subjects)
+subjects.add("Linear algebra")
+print(subjects)
+subjects.remove("PE")
+print(subjects)
+subjects.add("Arts")
+subjects.add("Arts")
+subjects.add("Arts")
+print(subjects)
+my_favorite_subjects = set(("Arts", "Digital design"))
+print(my_favorite_subjects)
+print(subjects.intersection(my_favorite_subjects))
+print(subjects.union(my_favorite_subjects))
+print(subjects.difference(my_favorite_subjects))
