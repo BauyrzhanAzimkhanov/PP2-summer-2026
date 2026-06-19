@@ -16,19 +16,19 @@ x = myFunc()
 print("At this point, y is still:", y)
 
 #Run the first iteration:
-next(x)
+print(next(x))
 
 #And y becomes 10:
 print("Now, y is:", y)
 
 #Run another iteration:
-next(x)
+print(next(x))
 
 #And y becomes 20:
 print("Now, y is:", y)
 
 #Run another iteration:
-next(x)
+print(next(x))
 
 #And y becomes 30:
 print("Now, y is:", y) 
