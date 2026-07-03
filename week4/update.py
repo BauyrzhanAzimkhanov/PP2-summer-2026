@@ -10,7 +10,7 @@ connection_parameters = {
 
 sql_instruction_safe = """UPDATE car_manufactures SET name = %s, foundation_year = %s WHERE id = %s;"""
 
-values = ("Mercedes-Benz", 1926, 2)
+values = ("AUDI", 1909, 2)
 
 with psycopg2.connect(**connection_parameters) as connection:
     with connection.cursor() as cursor:

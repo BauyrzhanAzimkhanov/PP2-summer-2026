@@ -8,7 +8,8 @@ connection_parameters = {
     "port": "5432"
 }
 
-sql_instruction_safe = """ALTER TABLE car_manufactures ADD id SERIAL UNIQUE NOT NULL;"""
+# sql_instruction_safe = """ALTER TABLE car_manufactures ADD id SERIAL UNIQUE NOT NULL;"""
+sql_instruction_safe = """ALTER TABLE car_manufactures ADD PRIMARY KEY (id);"""
 
 
 with psycopg2.connect(**connection_parameters) as connection:
