@@ -16,7 +16,7 @@ sql_instruction = f"""INSERT INTO {table_name}
 sql_instruction_safe = """INSERT INTO car_manufactures 
 (name, foundation_year, country) VALUES (%s, %s, %s);"""
 
-values = ("Nissan", 1934, "Japan")
+values = ("Ferrari", 1939, "Italy")
 
 with psycopg2.connect(**connection_parameters) as connection:
     with connection.cursor() as cursor:

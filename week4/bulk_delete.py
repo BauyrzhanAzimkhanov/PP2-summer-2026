@@ -1,9 +1,9 @@
 import psycopg2
 from connection_parameters import connection_parameters
 
-sql_instruction_safe = """DELETE FROM car_manufactures WHERE country = %s;"""
+sql_instruction_safe = """DELETE FROM car_manufactures WHERE country IN (%s);"""
 
-values = ("JAPAN",)
+values = ('JAPAN', 'Japan', 'JaPaN',)
 
 with psycopg2.connect(**connection_parameters) as connection:
     with connection.cursor() as cursor:
