@@ -8,9 +8,9 @@ connection_parameters = {
     "port": "5432"
 }
 
-sql_instruction_safe = """UPDATE car_manufactures SET name = %s, foundation_year = %s WHERE id = %s;"""
+sql_instruction_safe = """UPDATE car_manufactures SET country = %s WHERE name = %s;"""
 
-values = ("AUDI", 1909, 2)
+values = ("Japan", "toyota")
 
 with psycopg2.connect(**connection_parameters) as connection:
     with connection.cursor() as cursor:
