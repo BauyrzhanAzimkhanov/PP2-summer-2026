@@ -10,7 +10,5 @@ connection_parameters = {
 
 with psycopg2.connect(**connection_parameters) as connection:
     with connection.cursor() as cursor:
-        cursor.execute("CREATE TABLE example_table_1 (my_string VARCHAR(20) NOT NULL);")
-        result = cursor.fetchall()
-
-print(result)
+        cursor.execute("CREATE TABLE IF NOT EXISTS car_manufactures (name VARCHAR(20) NOT NULL, foundation_year INTEGER NOT NULL, country VARCHAR(20) NOT NULL);")
+    connection.commit()
