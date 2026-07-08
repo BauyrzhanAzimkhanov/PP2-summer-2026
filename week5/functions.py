@@ -33,7 +33,7 @@ SELECT ALL * FROM car_manufactures WHERE country = 'Japan';
 $$;"""
 
 sql_instruction = """SELECT print_japan_manufactures();"""
-sql = """SELECT *,german_manufacture_check(country) FROM car_manufactures;"""
+sql = """SELECT *, german_manufacture_check(country) FROM car_manufactures;"""
 
 values = ('Japan',)
 
