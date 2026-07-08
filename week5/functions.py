@@ -33,14 +33,15 @@ SELECT ALL * FROM car_manufactures WHERE country = 'Japan';
 $$;"""
 
 sql_instruction = """SELECT print_japan_manufactures();"""
+sql = """SELECT *,german_manufacture_check(country) FROM car_manufactures;"""
 
 values = ('Japan',)
 
 
 with psycopg2.connect(**connection_parameters) as connection:
     with connection.cursor() as cursor:
-        cursor.execute(sql_instruction_safe)
-        cursor.execute(sql_instruction)
+        cursor.execute(sql)
+        # cursor.execute(sql_instruction)
         result = cursor.fetchall()
     connection.commit()
 print(result)
